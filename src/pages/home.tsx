@@ -1,38 +1,11 @@
-
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home";       // Importa a sua página inicial
-import Cadastro from "./pages/cadastro"; // Importa a sua página de cadastro
+import Header from "../components/header";
+import Card from "../components/card";
+import { RepositoryIcon } from "../components/icons";
+import Principal from "../assets/principal.png";
+import Fundo1 from "../assets/fundo.jpg";
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cadastro" element={<Cadastro />} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
-
-export default App;
-
-
-
-
-
-
-
-
-
-{/*import React from "react";
-import Header from "./components/header";
-import Card from "./components/card";
-import Principal from "../src/assets/principal.png";
-import Fundo1 from "../src/assets/fundo.jpg";
-import { RepositoryIcon } from "./components/icons";
-
-function App() {
+function home() {
   const lidarComAdesao = () => {
     alert("Redirecionando para o formulário de adesão!");
   };
@@ -109,4 +82,4 @@ function App() {
   );
 }
 
-export default App;*/}
+export default home;

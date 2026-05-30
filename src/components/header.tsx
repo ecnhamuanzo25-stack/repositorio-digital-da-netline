@@ -1,6 +1,7 @@
 import React from "react";
 import logoNetline from "../assets/netline.jpg"
 import Button from "./button";
+import { Link } from "react-router-dom";
 
 // Definimos o que o Header precisa de receber (TypeScript)
 interface HeaderProps {
@@ -28,14 +29,16 @@ const Header: React.FC<HeaderProps> = ({ onPlanosClick }) => {
           Início
         </a>
         <a href="#sobrenós" style={styles.navLink}>
-          Sobre nós
+          Sobre a plataforma
         </a>
         <a href="#suporte" style={styles.navLink}>
           Suporte
         </a>
       </nav>
 
-      <Button title="Cadastre-se" onClickButton={() => onPlanosClick && onPlanosClick()} />
+      
+      <Link to="/cadastro" className="bg-blue-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition"
+         >Cadastre-se</Link>
     </header>
 
 
