@@ -1,23 +1,22 @@
 import React from "react";
-import logoNetline from "../assets/netline.jpg"
-import Button from "./button";
+import logoNetline from "../assets/netline.jpg";
+import button from "./button";
 import { Link } from "react-router-dom";
 
-// Definimos o que o Header precisa de receber (TypeScript)
 interface HeaderProps {
-  onPlanosClick?: () => void; // Uma função opcional para quando clicarem no botão de ação
+  onPlanosClick?: () => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ onPlanosClick }) => {
   return (
-    <header className="shadow-2xs flex flex-row justify-between items-center px-4 py-4 bg-white ">
+    <header className="shadow-2xs flex flex-row justify-between items-center px-4 py-4 bg-white sticky top-0 z-50 ">
       <div style={styles.logoContainer}>
         <div>
-        <img
-          src={logoNetline}
-          alt="Logotipo Netline"
-          style={styles.logoImage}
-         />
+          <img
+            src={logoNetline}
+            alt="Logotipo Netline"
+            style={styles.logoImage}
+          />
         </div>
         <span style={styles.logoText}>
           Net<span style={styles.logoHighlight}>line Serv</span>
@@ -36,12 +35,13 @@ const Header: React.FC<HeaderProps> = ({ onPlanosClick }) => {
         </a>
       </nav>
 
-      
-      <Link to="/cadastro" className="bg-blue-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition"
-         >Cadastre-se</Link>
+      <Link
+        to="/login"
+        className="bg-blue-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition"
+      >
+        Iniciar secção
+      </Link>
     </header>
-
-
   );
 };
 
@@ -62,13 +62,13 @@ const styles = {
     width: "auto",
     display: "block",
   },
-logoContainer: {
-  display: "flex",
-  alignItems: "center",
-  gap: "10px",
-  fontSize: "1.5rem",
-  fontWeight: "bold",
-},
+  logoContainer: {
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    fontSize: "1.5rem",
+    fontWeight: "bold",
+  },
   logoText: {
     color: "#333",
   },

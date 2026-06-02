@@ -11,7 +11,7 @@ function home() {
   };
 
   return (
-    <div>
+    <div className="">
       <Header onPlanosClick={lidarComAdesao} />
 
       <section
@@ -43,38 +43,48 @@ function home() {
             />
           </div>
       </section>
-      
-      <section id="sobrenós">
-        <div className="flex flex-col items-center p-44 bg-[#f7f7f7]" >
-         
-          <div className="justify-center" >
-            <h1 className="text-5xl font-bold leading-4 text-center"><span>Sobre a Plataforma</span></h1>
-            <br></br>
-            <p className="text-center text-base font-normal mt-2 max-w-[65%}">
-              O Repositório Digital da Netline nasceu da necessidade de centralizar, proteger e democratizar o acesso à informação essencial da nossa organização. Mais do que um banco de dados, esta plataforma é o coração do conhecimento da empresa — unificando a gestão de contratos ativos, o controle do nosso inventário de softwares e as diretrizes operacionais.
 
-              Nosso objetivo é eliminar silos de informação, garantindo que cada colaborador tenha as ferramentas e os documentos necessários para tomar decisões rápidas, seguras e alinhadas com o futuro da Netline.
+      <section id="sobrenós">
+        <div className="grid grid-cols-1 bg-gray-100 pt-20">
+          <div className="justify-center">
+            <h1 className="text-2xl md:text-5xl font-bold leading-4 text-center">
+              <span>Sobre a Plataforma</span>
+            </h1>
+            <br></br>
+            <p className="text-center text-base font-normal mt-2 max-w-[50%}">
+              O Repositório Digital da Netline é um espaço centralizado para consulta e preservação do conhecimento institucional. <br/>
+              A plataforma reúne aplicações desenvolvidas pela empresa, documentação técnica e funcional, manuais de utilização, <br/>marcos históricos e registos de eventos, garantindo que a informação permaneça acessível, organizada e disponível para toda a equipa.
             </p>
           </div>
-        </div>
-        <div>
-        </div>
 
-      </section>
-      <section id="suporte">
-          <div className="flex flex-col items-center p-20">
-             <h2 className="text-5xl font-bold leading-4 text-center p-8">Suporte</h2>
-             <h1 className="text-2xl font-bold leading-4 text-center" >
-               Contactos
-             </h1>
-             <p className="text-center text-base font-normal mt-2 max-w-[65%}">
-                 Problemas ao submeter manuais ou dúvidas? Entre em contacto com o nosso suporte técnico. Estamos disponíveis para garantir que a tua experiência seja simples e rápida.
-             </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-8 px-8 mb-15" >
+              <Card
+              title=" Aplicações e Documentação"
+              description="Consulte o catálogo de soluções desenvolvidas pela Netline, bem como os respetivos manuais e informações técnicas."
+              className="text-center"
+               />
+
+               <Card title="Conhecimento Centralizado" description="Reúna num único local aplicações, manuais, procedimentos e documentos essenciais para o funcionamento da organização." />
+               <Card title=" Memória Institucional" description="Preserve a história da empresa através de marcos importantes, eventos corporativos e conquistas alcançadas ao longo dos anos." />
           </div>
-        <div>
-            
         </div>
+      </section>
 
+      <section id="suporte">
+        <div className="flex flex-col items-center p-20">
+          <h2 className="text-5xl font-bold leading-4 text-center p-8">
+            Suporte
+          </h2>
+          <h1 className="text-2xl font-bold leading-4 text-center">
+            Contactos
+          </h1>
+          <p className="text-center text-base font-normal mt-2 max-w-[65%}">
+            Problemas ao submeter manuais ou dúvidas? <br/>Entre em contacto com o
+            nosso suporte técnico. Estamos disponíveis para garantir que a tua
+            experiência seja simples e rápida.
+          </p>
+        </div>
+        <div></div>
       </section>
 
       <footer></footer>
