@@ -1,8 +1,10 @@
-import React from 'react'
 
 const footer = () => {
   return (
-    <div className='bg-black'>footer</div>
+    <div className=" bg-blue-300">
+
+      
+    </div>
   )
 }
 

@@ -2,6 +2,8 @@ import React, { useState} from "react";
 import Button from "../components/button";
 import Fundo1 from "../assets/fundo.jpg";
 import { useForm,Watch } from "react-hook-form";
+import logoNetline from "../assets/netline.jpg";
+
 
 
 type DadosDoForm = {
@@ -32,6 +34,13 @@ export default function Cadastro() {
     >
       <div className="w-1/4 h-auto flex flex-col items-center justify-center bg-gray-50  rounded-2xl ">
         <form onSubmit={handleSubmit(salvarCadastro)} >
+           <div className=" flex justify-center items-center mt-1">
+                    <img
+                      src={logoNetline}
+                      alt="Logotipo Netline"
+                      className="w-1/5 "
+                    />
+                  </div>
           <div className="flex flex-col gap-4 text-center mt-10">
             <h2 className="text-3xl text-shadow-mist-600 font-bold">
               <span>Repositorio Interno da Netline</span>
